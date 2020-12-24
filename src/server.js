@@ -80,7 +80,6 @@ class CrudServer {
     }
 
     this.server.use(express.json());
-
     this.server.use((req, res, next) => {
       req.requestTime = new Date().toISOString();
       next();
