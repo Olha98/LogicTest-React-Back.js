@@ -14,7 +14,7 @@ const UserSchema = new Schema(
     skills: { type: String },
     projectsExperience: { type: String },
     workExperience: { type: String },
-    contacts: { type: String },
+    contactsPhone: { type: String },
     tokens: [
       {
         token: { type: String },

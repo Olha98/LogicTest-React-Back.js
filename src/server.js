@@ -7,6 +7,7 @@ const authRouter = require('./api/auth/auth.routers');
 
 const AppError = require('./api/errors/appError');
 const globalErrorHandler = require('./api/errors/error.controller');
+const usersRouter = require('./api/users/user.controller');
 
 require('dotenv').config({ path: path.join('./.env') });
 const PORT = process.env.PORT || 8080;
@@ -88,6 +89,7 @@ class CrudServer {
 
   initServerRouters() {
     this.server.use('/api/v1/auth', authRouter);
+    // this.server.use('/api/v1/users', usersRouter);
   }
 
   initErrorHandling() {
